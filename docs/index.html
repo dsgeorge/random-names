@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <style>
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+    </style>
+  </head>
 <body  style="background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/British_Houses_of_Parliament.jpg/1024px-British_Houses_of_Parliament.jpg);background-size:cover;">
   
 <h1>JavaScript Demos</h1>
 
 <p>Click the button to pick some random names.</p>
 
-<button onclick="pickNames()" style="color:white;font-size:130%">Pick Names!</button>
+<button class="button" onclick="pickNames()">Pick Names!</button>
 
-<p id="demo" style="height:5cm;color:white"></p>  
+<p id="demo" style="height:6cm;color:white;font-size:120%"></p>  
 
 <script>
 function pickNames(){
