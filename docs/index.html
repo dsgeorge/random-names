@@ -14,14 +14,12 @@
 function pickNames(){
   var names = [ "Peter", "Jane", "Dog", "Tooey", "Byey", "Dobadah", "Peppa", "George", "Kerry" ];
   var len = names.length;
-  document.getElementById("demo").innerHTML = ""
+  document.getElementById("demo").innerHTML = "";
   var i = 0;
   var used = [];
   while (i<4){
     var elem = Math.floor(Math.random() * len);
-    if (used.indexOf(elem) != -1){
-      break;
-    } else {
+    if (used.indexOf(elem) == -1){
       used.push(elem);
       document.getElementById("demo").innerHTML += (names[elem] + "</br>");
       i++;
