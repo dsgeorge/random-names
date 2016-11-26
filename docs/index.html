@@ -10,7 +10,7 @@
   var len = names.length;
   while (i<10){
     var elem = Math.floor(Math.random() * len)
-    document.getElementById("demo2").innerHTML = elem + " " + names[elem];
+    document.getElementById("demo2").innerHTML += (elem + " " + names[elem] + "\r\f");
     i++;
   }
 </script>
