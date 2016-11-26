@@ -22,7 +22,7 @@ function pickNames(){
     var elem = Math.floor(Math.random() * len);
     if (used.indexOf(elem) == -1){
       used.push(elem);
-      document.getElementById("demo").innerHTML += (names[elem] + "\t" + links[elem] + "</br>");
+      document.getElementById("demo").innerHTML += ("<a href=http://" + links[elem] +">" + names[elem] + "</a></br>");
       i++;
     }
   }
