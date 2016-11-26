@@ -13,6 +13,7 @@
 <script>
 function pickNames(){
   var names = [ "Peter", "Jane", "Dog", "Tooey", "Byey", "Dobadah", "Peppa", "George", "Kerry" ];
+  var links = ["www.peter", "www.jane", "www.dog", "www.tooey", "www.byey", "www.dobadah", "www.peppa", "www.george", "www.kerry"];
   var len = names.length;
   document.getElementById("demo").innerHTML = "";
   var i = 0;
@@ -21,7 +22,7 @@ function pickNames(){
     var elem = Math.floor(Math.random() * len);
     if (used.indexOf(elem) == -1){
       used.push(elem);
-      document.getElementById("demo").innerHTML += (names[elem] + "</br>");
+      document.getElementById("demo").innerHTML += (names[elem] + "\t" + links[elem] + "</br>");
       i++;
     }
   }
