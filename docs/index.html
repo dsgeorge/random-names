@@ -2,13 +2,27 @@
 <html>
 <body>
 
-<h1>My First JavaScript</h1>
+<h1>JavaScript Demos</h1>
 
 <button type="button"
-onclick="document.getElementById('demo').innerHTML = Date()">
+onclick="document.getElementById('demo1').innerHTML = Date()">
 Click me to display Date and Time.</button>
 
-<p id="demo"></p>
+<p id="demo1"></p>
 
+<script>
+  var names = [ "Peter", "Jane", "Dog", "Tooey", "Byey", "Dobadah", "Peppa", "George", "Kerry" ];
+  var len = names.length;
+  while (i<10){
+    var elem = Math.floor(Math.random() * len)
+    document.getElementById("demo2").innerHTML = elem + " " + names[elem];
+    i++;
+  }
+</script>
+  
+<p id="demo2"></p>
+
+  
+  
 </body>
 </html> 
