@@ -4,17 +4,23 @@
 
 <h1>JavaScript Demos</h1>
 
-<p id="demo2"></p>
-  
+<p>Click the button to pick some random names.</p>
+
+<button onclick="pickNames()">Pick Names!</button>
+
+<p id="demo"></p>  
+
 <script>
+function pickNames(){
   var names = [ "Peter", "Jane", "Dog", "Tooey", "Byey", "Dobadah", "Peppa", "George", "Kerry" ];
   var len = names.length;
   var i = 0;
   while (i<5){
     var elem = Math.floor(Math.random() * len);
-    document.getElementById("demo2").innerHTML += (elem + " " + names[elem] + "\r\f");
+    document.getElementById("demo").innerHTML += (elem + " " + names[elem] + "\r\f");
     i++;
   }
+}
 </script>
   
 
