@@ -8,8 +8,9 @@
 <script>
   var names = [ "Peter", "Jane", "Dog", "Tooey", "Byey", "Dobadah", "Peppa", "George", "Kerry" ];
   var len = names.length;
+  var i = 0;
   while (i<10){
-    var elem = Math.floor(Math.random() * len)
+    var elem = Math.floor(Math.random() * len);
     document.getElementById("demo2").innerHTML += (elem + " " + names[elem] + "\r\f");
     i++;
   }
