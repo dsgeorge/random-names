@@ -16,10 +16,16 @@ function pickNames(){
   var len = names.length;
   document.getElementById("demo").innerHTML = ""
   var i = 0;
-  while (i<5){
+  var used = [];
+  while (i<4){
     var elem = Math.floor(Math.random() * len);
-    document.getElementById("demo").innerHTML += (names[elem] + "</br>");
-    i++;
+    if (used.indexOf(elem) != -1){
+      break;
+    } else {
+      used.push(elem)
+      document.getElementById("demo").innerHTML += (names[elem] + "</br>");
+      i++;
+    }
   }
 }
 </script>
