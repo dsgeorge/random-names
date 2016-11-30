@@ -41,7 +41,9 @@ function pickNames(){
   var names = [ "Peter", "Jane", "Dog", "Tooey", "Byey", "Dobadah", "Peppa", "George", "Kerry" ];
   var links = ["www.peter", "www.jane", "www.dog", "www.tooey", "www.byey", "www.dobadah", "www.peppa", "www.george", "www.kerry"];
   var len = names.length;
+  var data = [ {name: "Peter", link: "www.peter"}, {name: "Jane", link: "www.jane"} ];
   document.getElementById("demo").innerHTML = "";
+  document.getElementById("demo").innerHTML += (data[0].name + " &nbsp; &nbsp; &nbsp; <a href=http://" + data[0].link +"> contact </a></br>");
   var i = 0;
   var used = [];
   while (i<4){
