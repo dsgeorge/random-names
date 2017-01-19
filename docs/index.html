@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       p {
         font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
       }
       h1 {
         font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        /* For mobile phones: */
+        font-size: 10vw;
+        /* For desktop: */
+        @media only screen and (min-width: 768px) {
+          font-size: 5vw;
+        }
       }
       a:link, a:visited {
         background-color: #4caf50;
