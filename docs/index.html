@@ -78,7 +78,7 @@ function pickNamesDemo(){
   var i = 0;
   var used = [];
   while (i<4){
-    var elem = Math.floor(Math.random() * len);
+    var elem = Math.floor(Math.random() * data.length);
     if (used.indexOf(elem) == -1){
       used.push(elem);
       document.getElementById("demo").innerHTML += (data[elem].name + " &nbsp; &nbsp; &nbsp; <a href=" + data[elem].pwURL +"> contact </a></br>");
