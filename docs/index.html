@@ -106,7 +106,7 @@ function pickNamesDemo(){
         cell = row.insertCell(-1);
         cell.appendChild(document.createTextNode("(" + data[elem].party + ", " + data[elem].constituency + ")"));
         var a = document.createElement('a');
-        var linkText = document.createTextNode("parliament.co.uk);
+        var linkText = document.createTextNode("parliament.co.uk");
         a.appendChild(linkText);
         a.title = linkText;
         a.href = data[elem].pwUrl;
