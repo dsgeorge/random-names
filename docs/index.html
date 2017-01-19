@@ -2,6 +2,15 @@
 <html>
   <head>
     <style>
+table {
+    border-collapse: collapse;
+}
+td,th {
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even){background-color: #f2f2f2+      
+      
 .button {
   display: inline-block;
   padding: 15px 25px;
@@ -75,17 +84,22 @@ function pickNamesDemo(){
 {name: "Amanda Milling", party: "Conservative", constituency: "Cannock Chase", pwUrl: "http://www.parliament.uk/biographies/commons/amanda-milling/4454", twfyUrl: "http://www.theyworkforyou.com/mp/25350/amanda_milling/cannock_chase"},
 {name: "Ian Austin", party: "Labour", constituency: "Dudley North", pwUrl: "http://www.parliament.uk/biographies/commons/ian-austin/1511", twfyUrl: "http://www.theyworkforyou.com/mp/11553/ian_austin/dudley_north"}
     ];
-  var i = 0;
-  var used = [];
-  while (i<4){
-    var elem = Math.floor(Math.random() * data.length);
-    if (used.indexOf(elem) == -1){
-      used.push(elem);
-      document.getElementById("demo").innerHTML += (data[elem].name + " (" + data[elem].party + ", " + data[elem].constituency + ") &nbsp; &nbsp; &nbsp; <a href=" + data[elem].pwUrl +"> parliament.co.uk </a> <a href=" + data[elem].twfyUrl +"> theyworkforyou.com </a></br>");
-      i++;
+    var i = 0;
+    var used = [];
+    document.getElementById("demo").innerHTML = "<table>";
+    while (i<4){
+      var elem = Math.floor(Math.random() * data.length);
+      if (used.indexOf(elem) == -1){
+        used.push(elem);
+        document.getElementById("demo").innerHTML += "<tr><td>" + data[elem].name + "</td>"
+                                                      + "<td>(" + data[elem].party  + data[elem].constituency + ") </td>"
+                                                      + "<td> <a href=" + data[elem].pwUrl + "> parliament.co.uk </a> </td>"
+                                                      + "<td> <a href=" + data[elem].twfyUrl + "> theyworkforyou.com </a> </td>/tr>";
+        i++;
+      }
     }
+    document.getElementById("demo").innerHTML += "</table>";
   }
-}
 </script>
     
 <p style="color:lightgrey;margin-top:5cm;">
