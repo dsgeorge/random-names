@@ -25,7 +25,7 @@
         font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
         border-collapse: collapse;
         color:white;
-        padding-top: 2cm;
+        padding-top: 5vh;
       }
       #mptable td {
         text-align: left;
@@ -33,7 +33,6 @@
         padding-bottom: 4px;
         padding-left: 4px;
         padding-right: 4px;
-        width: 100%;
         background-color:rgba(211, 211, 211, 0.4);
       }
       /* #mptable tr:nth-child(even){background-color: #f2f2f2}
@@ -66,17 +65,18 @@
   
   <h1>Remain MP random picker</h1>
 
-  <p style="height:1cm">Click the button to pick some random remain-supporting MPs from the list.</p>
+  <p style="height:5vh">Click the button to pick at random four remain-supporting MPs from the list.</p>
 
   <button class="button" onclick="pickNames()">Click to pick!</button>
 
-  <p style="height:1cm"></p>
+  <p style="height:5vh"></p>
 
   <table id="mptable"></table>  
 
 <script>
   function pickNames(){
-    var data = [{name: "Ruth Smeeth", party: "Labour", constituency: "Stoke-on-Trent North", pwUrl: "http://www.parliament.uk/biographies/commons/ruth-smeeth/4508", twfyUrl: "http://www.theyworkforyou.com/mp/25435/ruth_smeeth/stoke-on-trent_north"},
+    var data = [
+{name: "Ruth Smeeth", party: "Labour", constituency: "Stoke-on-Trent North", pwUrl: "http://www.parliament.uk/biographies/commons/ruth-smeeth/4508", twfyUrl: "http://www.theyworkforyou.com/mp/25435/ruth_smeeth/stoke-on-trent_north"},
 {name: "Matt Warman", party: "Conservative", constituency: "Boston and Skegness", pwUrl: "http://www.parliament.uk/biographies/commons/matt-warman/4361", twfyUrl: "http://www.theyworkforyou.com/mp/25395/matt_warman/boston_and_skegness"},
 {name: "Yvette Cooper", party: "Labour", constituency: "Normanton, Pontefract and Castleford", pwUrl: "http://www.parliament.uk/biographies/commons/yvette-cooper/420", twfyUrl: "http://www.theyworkforyou.com/mp/10131/yvette_cooper/normanton%2C_pontefract_and_castleford"},
 {name: "Gloria De Piero", party: "Labour", constituency: "Ashfield", pwUrl: "http://www.parliament.uk/biographies/commons/gloria-de-piero/3915", twfyUrl: "http://www.theyworkforyou.com/mp/24811/gloria_de_piero/ashfield"},
@@ -599,7 +599,7 @@
   }
 </script>
     
-<p style="color:lightgrey;align:bottom;margin-top:1cm;">
+<p style="color:lightgrey;align:bottom;margin-top:5vh;">
   Image by Maurice from Zoetermeer, Netherlands (The British Parliament and Big Ben) [CC BY 2.0 (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons
   </p>
   
