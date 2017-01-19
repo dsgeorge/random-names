@@ -37,7 +37,7 @@
 <p id="demo" style="height:6cm;color:white;font-size:120%"></p>  
 
 <script>
-function pickNames(){
+function pickNamesDemo(){
   var names = [ "Peter", "Jane", "Dog", "Tooey", "Byey", "Dobadah", "Peppa", "George", "Kerry" ];
   var links = ["www.peter", "www.jane", "www.dog", "www.tooey", "www.byey", "www.dobadah", "www.peppa", "www.george", "www.kerry"];
   var len = names.length;
@@ -56,9 +56,38 @@ function pickNames(){
   }
 }
 </script>
-  
 
-  
+<script>
+  function pickNamesDemo(){
+    var data = [{name: "Ruth Smeeth", party: "Labour", constituency: "Stoke-on-Trent North", pwUrl: "http://www.parliament.uk/biographies/commons/ruth-smeeth/4508", twfyUrl: "http://www.theyworkforyou.com/mp/25435/ruth_smeeth/stoke-on-trent_north"}
+{name: "Matt Warman", party: "Conservative", constituency: "Boston and Skegness", pwUrl: "http://www.parliament.uk/biographies/commons/matt-warman/4361", twfyUrl: "http://www.theyworkforyou.com/mp/25395/matt_warman/boston_and_skegness"}
+{name: "Yvette Cooper", party: "Labour", constituency: "Normanton, Pontefract and Castleford", pwUrl: "http://www.parliament.uk/biographies/commons/yvette-cooper/420", twfyUrl: "http://www.theyworkforyou.com/mp/10131/yvette_cooper/normanton%2C_pontefract_and_castleford"}
+{name: "Gloria De Piero", party: "Labour", constituency: "Ashfield", pwUrl: "http://www.parliament.uk/biographies/commons/gloria-de-piero/3915", twfyUrl: "http://www.theyworkforyou.com/mp/24811/gloria_de_piero/ashfield"}
+{name: "Mr Winnick", party: "Labour", constituency: "Walsall North", pwUrl: "http://www.parliament.uk/biographies/commons/mr-david-winnick/316", twfyUrl: "http://www.theyworkforyou.com/mp/10645/david_winnick/walsall_north"}
+{name: "Edward Miliband", party: "Labour", constituency: "Doncaster North", pwUrl: "http://www.parliament.uk/biographies/commons/edward-miliband/1510", twfyUrl: "http://www.theyworkforyou.com/mp/11545/ed_miliband/doncaster_north"}
+{name: "Robert Flello", party: "Labour", constituency: "Stoke-on-Trent South", pwUrl: "http://www.parliament.uk/biographies/commons/robert-flello/1569", twfyUrl: "http://www.theyworkforyou.com/mp/11843/rob_flello/stoke-on-trent_south"}
+{name: "Michael Dugher", party: "Labour", constituency: "Barnsley East", pwUrl: "http://www.parliament.uk/biographies/commons/michael-dugher/3916", twfyUrl: "http://www.theyworkforyou.com/mp/24762/michael_dugher/barnsley_east"}
+{name: "Brandon Lewis", party: "Conservative", constituency: "Great Yarmouth", pwUrl: "http://www.parliament.uk/biographies/commons/brandon-lewis/4009", twfyUrl: "http://www.theyworkforyou.com/mp/24879/brandon_lewis/great_yarmouth"}
+{name: "Grahame Morris", party: "Labour", constituency: "Easington", pwUrl: "http://www.parliament.uk/biographies/commons/grahame-morris/3973", twfyUrl: "http://www.theyworkforyou.com/mp/24715/grahame_morris/easington"}
+{name: "Karl Turner", party: "Labour", constituency: "Kingston upon Hull East", pwUrl: "http://www.parliament.uk/biographies/commons/karl-turner/4030", twfyUrl: "http://www.theyworkforyou.com/mp/24767/karl_turner/kingston_upon_hull_east"}
+{name: "Mr Bailey", party: "Labour/Co-operative", constituency: "West Bromwich West", pwUrl: "http://www.parliament.uk/biographies/commons/mr-adrian-bailey/320", twfyUrl: "http://www.theyworkforyou.com/mp/10683/adrian_bailey/west_bromwich_west"}
+{name: "John Healey", party: "Labour", constituency: "Wentworth and Dearne", pwUrl: "http://www.parliament.uk/biographies/commons/john-healey/400", twfyUrl: "http://www.theyworkforyou.com/mp/10268/john_healey/wentworth_and_dearne"}
+{name: "Amanda Milling", party: "Conservative", constituency: "Cannock Chase", pwUrl: "http://www.parliament.uk/biographies/commons/amanda-milling/4454", twfyUrl: "http://www.theyworkforyou.com/mp/25350/amanda_milling/cannock_chase"}
+{name: "Ian Austin", party: "Labour", constituency: "Dudley North", pwUrl: "http://www.parliament.uk/biographies/commons/ian-austin/1511", twfyUrl: "http://www.theyworkforyou.com/mp/11553/ian_austin/dudley_north"}
+    ];
+  var i = 0;
+  var used = [];
+  while (i<4){
+    var elem = Math.floor(Math.random() * len);
+    if (used.indexOf(elem) == -1){
+      used.push(elem);
+      document.getElementById("demo").innerHTML += (data[elem].name + " &nbsp; &nbsp; &nbsp; <a href=" + data[elem].pwURL +"> contact </a></br>");
+      i++;
+    }
+  }
+}
+</script>
+    
 <p style="color:lightgrey;margin-top:5cm;">
   Image by Maurice from Zoetermeer, Netherlands (The British Parliament and Big Ben) [CC BY 2.0 (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons
   </p>
