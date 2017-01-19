@@ -98,7 +98,7 @@ function pickNamesDemo(){
       var elem = Math.floor(Math.random() * data.length);
       if (used.indexOf(elem) == -1){
         used.push(elem);
-        document.getElementById("mptable").insertRow(-1);
+        var row = document.getElementById("mptable").insertRow(-1);
         var cell = row.insertCell(-1);  
         cell.appendChild(document.createTextNode(i+1));
         cell = row.insertCell(-1);
