@@ -43,11 +43,11 @@
   </head>
 <body  style="background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/British_Houses_of_Parliament.jpg/1024px-British_Houses_of_Parliament.jpg);background-size:cover;">
   
-<h1>JavaScript Demos</h1>
+<h1>Remain MP random picker</h1>
 
-<p>Click the button to pick some random names.</p>
+<p>Click the button to pick some random remain MPs from the list.</p>
 
-<button class="button" onclick="pickNames()">Pick Names!</button>
+<button class="button" onclick="pickNames()">Click to pick!</button>
 
 <p id="demo" style="height:6cm;color:white;font-size:120%"></p>  
 
@@ -97,7 +97,7 @@ function pickNamesDemo(){
       var elem = Math.floor(Math.random() * data.length);
       if (used.indexOf(elem) == -1){
         used.push(elem);
-        document.getElementById("demo").innerHTML += "<tr><td>" + data[elem].name + "</td>"
+        document.getElementById("demo").innerHTML += "<tr><td>" + (i+1) + "</td> <td>" + data[elem].name + "</td>"
                                                       + "<td>(" + data[elem].party  + data[elem].constituency + ") </td>"
                                                       + "<td> <a href=" + data[elem].pwUrl + "> parliament.co.uk </a> </td>"
                                                       + "<td> <a href=" + data[elem].twfyUrl + "> theyworkforyou.com </a> </td> </tr>";
