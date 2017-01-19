@@ -81,7 +81,7 @@ function pickNamesDemo(){
     var elem = Math.floor(Math.random() * data.length);
     if (used.indexOf(elem) == -1){
       used.push(elem);
-      document.getElementById("demo").innerHTML += (data[elem].name + " &nbsp; &nbsp; &nbsp; <a href=" + data[elem].pwURL +"> contact </a></br>");
+      document.getElementById("demo").innerHTML += (data[elem].name + " (" + data[elem].party + ", " + data[elem].constituency + ") &nbsp; &nbsp; &nbsp; <a href=" + data[elem].pwUrl +"> parliament.co.uk </a> <a href=" + data[elem].twfyUrl +"> theyworkforyou.com </a></br>");
       i++;
     }
   }
