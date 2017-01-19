@@ -8,7 +8,19 @@
       h1 {
         font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
       }
+      a:link, a:visited {
+        background-color: #bebebe;
+        color: #003cb3;
+        padding: 14px 35px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 10px;
+      }
 
+      a:hover, a:active {
+        background-color: white;
+      }
       #mptable {
         font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
         border-collapse: collapse;
@@ -26,62 +38,41 @@
       }
       /* #mptable tr:nth-child(even){background-color: #f2f2f2}
       */
-.button {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
+      .button {
+        display: inline-block;
+        padding: 15px 25px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 9px #999;
+      }
 
-.button:hover {background-color: #3e8e41}
+      .button:hover {background-color: #3e8e41}
 
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
+      .button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
     </style>
   </head>
   <body  style="background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/British_Houses_of_Parliament.jpg/1024px-British_Houses_of_Parliament.jpg);background-size:cover;">
   
   <h1>Remain MP random picker</h1>
 
-  <p>Click the button to pick some random remain-supporting MPs from the list.</p>
+  <p style="height:1cm">Click the button to pick some random remain-supporting MPs from the list.</p>
 
   <button class="button" onclick="pickNames()">Click to pick!</button>
 
-  <p style="height:2cm"></p>
+  <p style="height:1cm"></p>
 
   <table id="mptable"></table>  
-
-<script>
-function pickNamesDemo(){
-  var names = [ "Peter", "Jane", "Dog", "Tooey", "Byey", "Dobadah", "Peppa", "George", "Kerry" ];
-  var links = ["www.peter", "www.jane", "www.dog", "www.tooey", "www.byey", "www.dobadah", "www.peppa", "www.george", "www.kerry"];
-  var len = names.length;
-  var data = [ {name: "Peter", link: "www.peter"}, {name: "Jane", link: "www.jane"} ];
-  document.getElementById("mptable").innerHTML = "";
-  //document.getElementById("demo").innerHTML += (data[0].name + " &nbsp; &nbsp; &nbsp; <a href=http://" + data[0].link +"> contact </a></br>");
-  var i = 0;
-  var used = [];
-  while (i<4){
-    var elem = Math.floor(Math.random() * len);
-    if (used.indexOf(elem) == -1){
-      used.push(elem);
-      document.getElementById("mptable").innerHTML += (names[elem] + " &nbsp; &nbsp; &nbsp; <a href=http://" + links[elem] +"> contact </a></br>");
-      i++;
-    }
-  }
-}
-</script>
 
 <script>
   function pickNames(){
