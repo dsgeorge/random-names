@@ -22,7 +22,7 @@
         padding-left: 4px;
         padding-right: 4px;
         width: 100%;
-        background-color:rgba(211, 211, 211, 0.2);
+        background-color:rgba(211, 211, 211, 0.4);
       }
       /* #mptable tr:nth-child(even){background-color: #f2f2f2}
       */
@@ -99,6 +99,11 @@ function pickNamesDemo(){
 {name: "Amanda Milling", party: "Conservative", constituency: "Cannock Chase", pwUrl: "http://www.parliament.uk/biographies/commons/amanda-milling/4454", twfyUrl: "http://www.theyworkforyou.com/mp/25350/amanda_milling/cannock_chase"},
 {name: "Ian Austin", party: "Labour", constituency: "Dudley North", pwUrl: "http://www.parliament.uk/biographies/commons/ian-austin/1511", twfyUrl: "http://www.theyworkforyou.com/mp/11553/ian_austin/dudley_north"}
     ];
+    // empty table
+    var table = document.getElementById("mptable");
+    while (table.hasChildNodes()) {   
+      table.removeChild(table.firstChild);
+    }
     var i = 0;
     var used = [];
     while (i<4){
@@ -107,8 +112,8 @@ function pickNamesDemo(){
         used.push(elem);
         var row = document.getElementById("mptable").insertRow(-1);
         var cell = row.insertCell(-1);  
-        cell.appendChild(document.createTextNode(i+1));
-        cell = row.insertCell(-1);
+        /*cell.appendChild(document.createTextNode(i+1));
+        cell = row.insertCell(-1);*/
         cell.appendChild(document.createTextNode(data[elem].name));
         cell = row.insertCell(-1);
         cell.appendChild(document.createTextNode("(" + data[elem].party + ", " + data[elem].constituency + ")"));
