@@ -6,13 +6,16 @@
       p {
         font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
       }
-      h1 {
-        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-        /* For mobile phones: */
-        font-size: 10vw;
-        /* For desktop: */
-        @media only screen and (min-width: 768px) {
-          font-size: 5vw;
+      /* For mobile phones: */
+        h1 {
+          font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+          font-size: 6vw;
+        }      
+      /* For desktop: */
+      @media (min-device-width: 640px) {
+        h1 {
+          font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+          font-size: 3vw;
         }
       }
       a:link, a:visited {
