@@ -586,9 +586,9 @@
         /*cell.appendChild(document.createTextNode(i+1));
         cell = row.insertCell(-1);*/
         cell.appendChild(document.createTextNode(data[elem].name));
-        if (smallscreen){
+        /* if (smallscreen){
           row = document.getElementById("mptable").insertRow(-1);
-        }
+        } */
         cell = row.insertCell(-1);
         cell.appendChild(document.createTextNode("(" + data[elem].party + ", " + data[elem].constituency + ")"));
         var a = document.createElement('a');
@@ -600,6 +600,7 @@
           row = document.getElementById("mptable").insertRow(-1);
         }
         cell = row.insertCell(-1);
+        cell.setAttribute("colspan", 2);
         cell.appendChild(a);
         a = document.createElement('a');
         var linkText = document.createTextNode("theyworkforyou.com");
@@ -610,6 +611,7 @@
           row = document.getElementById("mptable").insertRow(-1);
         }
         cell = row.insertCell(-1);
+        cell.setAttribute("colspan", 2);
         cell.appendChild(a);
         /* document.getElementById("demo").innerHTML += "<tr><td>" + (i+1) + "</td> <td>" + data[elem].name + "</td>"
                                                       + "<td>(" + data[elem].party  + data[elem].constituency + ") </td>"
