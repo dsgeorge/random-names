@@ -14,8 +14,7 @@
       /* For desktop: */
       @media (min-device-width: 640px) {
         h1 {
-          font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-          font-size: 3vw;
+          font-size: 5vw;
         }
       }
       a:link, a:visited {
@@ -571,6 +570,7 @@
     while (table.hasChildNodes()) {   
       table.removeChild(table.firstChild);
     }
+    var smallscreen = (screen.width<640); /* detect small mobile screen for different layout */
     var i = 0;
     var used = [];
     while (i<4){
@@ -582,6 +582,9 @@
         /*cell.appendChild(document.createTextNode(i+1));
         cell = row.insertCell(-1);*/
         cell.appendChild(document.createTextNode(data[elem].name));
+        if (smallscreen){
+          row = document.getElementById("mptable").insertRow(-1);
+        }
         cell = row.insertCell(-1);
         cell.appendChild(document.createTextNode("(" + data[elem].party + ", " + data[elem].constituency + ")"));
         var a = document.createElement('a');
@@ -589,6 +592,9 @@
         a.appendChild(linkText);
         a.title = linkText;
         a.href = data[elem].pwUrl;
+        if (smallscreen){
+          row = document.getElementById("mptable").insertRow(-1);
+        }
         cell = row.insertCell(-1);
         cell.appendChild(a);
         a = document.createElement('a');
@@ -596,6 +602,9 @@
         a.appendChild(linkText);
         a.title = linkText;
         a.href = data[elem].twfyUrl;
+        if (smallscreen){
+          row = document.getElementById("mptable").insertRow(-1);
+        }
         cell = row.insertCell(-1);
         cell.appendChild(a);
         /* document.getElementById("demo").innerHTML += "<tr><td>" + (i+1) + "</td> <td>" + data[elem].name + "</td>"
