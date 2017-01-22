@@ -21,7 +21,7 @@
           font-size: 5vw;
         }
       }
-      #greenbuttonlink a.link, a.visited {
+      a.greenbuttonlink:link, a.greenbuttonlink:visited {
         background-color: #4caf50;
         color: white;
         padding: 15px 15px;
@@ -30,7 +30,7 @@
         display: inline-block;
         border-radius: 10px;
       }
-      #greenbuttonlink a.hover, a.active {
+      a.greenbuttonlink:hover, a.greenbuttonlink:active {
         background-color: #3e8e41;
       }
       
@@ -624,7 +624,7 @@
         a.appendChild(linkText);
         a.title = linkText;
         a.href = data[elem].pwUrl;
-        a.id = "greenbuttonlink";
+        a.class = "greenbuttonlink";
         if (smallscreen){
           row = document.getElementById("mptable").insertRow(-1);
         }
@@ -637,7 +637,7 @@
         a.appendChild(linkText);
         a.title = linkText;
         a.href = data[elem].twfyUrl
-        a.id = "greenbuttonlink";
+        a.class = "greenbuttonlink";
         if (smallscreen){
           row = document.getElementById("mptable").insertRow(-1);
         }
